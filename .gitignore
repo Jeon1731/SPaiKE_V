@@ -1,0 +1,5 @@
+# models
+*.pt
+
+# virtual environments
+.venv/
