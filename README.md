@@ -133,6 +133,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 ## 🌊 데이터 파이프라인
+```
 ┌────────────────────────┐
 │   동영상 업로드 (.mp4)  │
 └────────────┬───────────┘
@@ -156,7 +157,7 @@ streamlit run app.py
 ┌────────────────────────┐
 │    결과 막대 그래프     │
 └────────────────────────┘
-
+```
 
 ## 👥 팀원별 역할 분담
 - ✨ Lee (20263007) - Ball Dataset PreProcessing & Augmentation, Ball Tracking (Frame-by-frame Detection, bytetrack), Stremlit UI
