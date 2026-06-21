@@ -1,20 +1,40 @@
 # 테스트용
 test/
 
-# models
-*.pt
-
-# trackers
-# trackers/*.yaml
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 
 # virtual environments
 .venv/
+venv/
+
+# Streamlit / temp files
+temp/
+sdash/temp/
 
 # tracking results
 runs/
 
-# uploaded video
+# uploaded / output videos
 videos/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
 
-# pycache
-*.pyc
+# model files
+models/
+sdash/models/*
+!sdash/models/.gitkeep
+*.pt
+*.onnx
+*.pth
+*.engine
+
+# OS
+.DS_Store
+Thumbs.db
