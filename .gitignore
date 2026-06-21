@@ -1,3 +1,6 @@
+# 테스트용
+test/
+
 # models
 *.pt
 
@@ -10,8 +13,8 @@
 # tracking results
 runs/
 
-# 테스트용
-test/
+# uploaded video
+videos/
 
 # pycache
-./tasks/__pycache__/
+*.pyc
