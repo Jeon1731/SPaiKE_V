@@ -27,7 +27,7 @@ videos/
 *.webm
 
 # model files
-/models/
+models/
 sdash/models/*
 !sdash/models/
 !sdash/models/.gitkeep
