@@ -1,5 +1,17 @@
 # models
 *.pt
 
+# trackers
+# trackers/*.yaml
+
 # virtual environments
 .venv/
+
+# tracking results
+runs/
+
+# 테스트용
+test/
+
+# pycache
+./tasks/__pycache__/
