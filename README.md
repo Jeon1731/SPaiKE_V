@@ -132,6 +132,32 @@ pip install -r requirements.txt
 ```
 streamlit run app.py
 ```
-## 💾 데이터 파이프라인
+## 🌊 데이터 파이프라인
+┌────────────────────────┐
+│   동영상 업로드 (.mp4)  │
+└────────────┬───────────┘
+             │
+             ▼
+┌────────────────────────┐
+│     모델 (.pt) 추론     │
+└────────────┬───────────┘
+             │
+             ▼
+┌───────────────────────────┐
+│      트래킹 (txt 라벨)     │
+└────────────┬──────────────┘
+             │
+             ▼
+┌────────────┬──────────────┐
+│   프레임   │  실시간 표    │
+└────────────┬──────────────┘
+             │
+             ▼
+┌────────────────────────┐
+│    결과 막대 그래프     │
+└────────────────────────┘
+
 
 ## 👥 팀원별 역할 분담
+- ✨ Lee (20263007) - Ball Dataset PreProcessing & Augmentation, Ball Tracking (Frame-by-frame Detection, bytetrack), Stremlit UI
+- 🫧 Jeon (20230887) - Player Dataset PreProcessing, Player Tracking(botsort, parameter custom), Streamlit UI
