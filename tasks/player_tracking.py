@@ -1,4 +1,8 @@
+import sys
+import os
 from ultralytics import YOLO
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import utils.config as config
 
 # video_path # ui parameter
@@ -10,7 +14,9 @@ class PlayerTracker:
         self.video_path = video_path
 
     def start(self): 
-        model = YOLO(self.player_model_path)
+        print("PlayerTracker: start")
+
+        model = YOLO(config.PLAYER_MODEL_PATH)
 
         results = model.track(
             source = self.video_path,
@@ -25,4 +31,5 @@ class PlayerTracker:
             name='tracking'
         )
 
-        return results
+        print("PlayerTracker: finished")
+        # return results

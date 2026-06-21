@@ -1,8 +1,11 @@
+import sys
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import utils.config as config
-import get_max_frame_number
+from tasks.get_max_frame_number import get_max_frame_number
 
 class BallTouchReferee:
     def __init__(self, video_path, frame_window, speed_thresh, angle_thresh):
@@ -23,6 +26,8 @@ class BallTouchReferee:
         self.change_frames = []
 
     def start(self):
+        print("BallTouchReferee: start")
+
         self.read_ball_positions()
         self.compute_speed_angle()
         self.detect_changes()
@@ -32,6 +37,8 @@ class BallTouchReferee:
         for f in self.change_frames:
             closest_id, dist = self.find_closest_player(f, self.ball_positions[f])
             print(f"Frame {f}: Closest Player ID={closest_id}, Distance={dist:.4f}")
+        
+        print("BallTouchReferee: finished")
 
 
     def read_ball_positions(self):
@@ -197,5 +204,5 @@ class BallTouchReferee:
 #     cv2.destroyAllWindows()
 #     cap.release()
 
-# # 실행 예시
+# # # 실행 예시
 # draw_frame_with_ids("sample2", 439)

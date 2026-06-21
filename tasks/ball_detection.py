@@ -1,11 +1,14 @@
 from ultralytics import YOLO
+import sys
 import os
 import torch
 import numpy as np
 import pandas as pd
 import cv2
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import utils.config as config
-from video_width_height import VideoWidthHeightGetter
+from tasks.video_width_height import VideoWidthHeightGetter
 
 class BallDetector:
     def __init__(self, video_path): ## Streamlit에서 video_path 입력받기
@@ -20,9 +23,13 @@ class BallDetector:
         self.df = None # DaraFrame
 
     def start(self):
+        print("BallDetector: start")
+
         self.distance_gating()
         self.curve_fitting()
         self.add_labels()
+
+        print("BallDetector: finished")
     
     def distance_gating(self): # 거리 가드 보강 
         # video_path = './test/sample2.mp4'
