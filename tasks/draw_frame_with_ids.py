@@ -42,9 +42,4 @@ def draw_frame_with_ids(video_path, frame, frame_number):
         cv2.rectangle(frame, (x1,y1), (x2,y2), color, 2)
         cv2.putText(frame, f"ID:{pid}", (x1,y1-10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
 
-
-    # cv2.imshow("Frame with IDs", frame)
-    # cv2.waitKey(0)
-    # cv2.destroyAllWindows()
-    # cap.release()
     return frame
