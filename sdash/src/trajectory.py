@@ -1,16 +1,3 @@
-'''# 공 트래킹 trajectory
-import pandas as pd
-
-def interpolate_trajectory(raw_trajectory):
-    """Pass 1에서 수집한 리스트를 받아 보간된 DataFrame을 반환"""
-    df = pd.DataFrame(raw_trajectory, columns=['frame', 'cx', 'cy', 'w', 'h', 'conf'])
-    df['cx'] = df['cx'].interpolate(method='linear')
-    df['cy'] = df['cy'].interpolate(method='linear')
-    df['w'] = df['w'].interpolate(method='linear').bfill().ffill()
-    df['h'] = df['h'].interpolate(method='linear').bfill().ffill()
-    df['conf'] = df['conf'].fillna(0.0)
-    return df'''
-
 import pandas as pd
 
 

@@ -1,26 +1,3 @@
-'''
-FINETUNED_BALL_MODEL = "./models/ball_best.onnx"
-FINETUNED_PLAYER_MODEL = "./models/player_best.onnx"
-BASE_YOLO_MODEL = "./models/yolov8s.onnx"
-
-BALL_CLASS_ID = 0
-FIXED_BALL_ID = 13
-MAX_ALLOWED_DISTANCE = 150
-
-# 선수 트래커 파라미터 기본값 (bot-sort)
-DEFAULT_P_CONF = 0.75
-DEFAULT_P_BUF = 100
-DEFAULT_P_MATCH = 0.80
-
-# 공 트래커 파라미터 기본값 (bytetrack)
-DEFAULT_B_CONF = 0.03
-DEFAULT_B_BUF = 60
-DEFAULT_B_MATCH = 0.95
-
-# 공 탐지 파라미터 기본값 (frame-by-frame detection)
-DEFAULT_B_DETECT_CONF = 0.15
-'''
-
 from pathlib import Path
 
 # ==========================================

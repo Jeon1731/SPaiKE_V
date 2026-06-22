@@ -1,22 +1,3 @@
-'''import yaml
-
-def create_temp_yaml(tracker_type, buffer, match, filename):
-    cfg = {
-        "tracker_type": tracker_type,
-        "match_thresh": match,
-        "track_buffer": buffer,
-        "fuse_score": True
-    }
-    if tracker_type == 'botsort':
-        cfg.update({"track_high_thresh": 0.75, "track_low_thresh": 0.1, "new_track_thresh": 0.75, "gmc_method": "sparseOptFlow", "proximity_thresh": 0.5, "appearance_thresh": 0.25, "with_reid": True, "model": "auto"})
-    else:
-        cfg.update({"track_high_thresh": 0.25, "track_low_thresh": 0.05, "new_track_thresh": 0.45, "gmc_method": "none", "proximity_thresh": 0.5, "appearance_thresh": 0.25, "with_reid": False, "model": "auto"})
-    with open(filename, 'w') as f: yaml.dump(cfg, f)
-    return filename
-
-
-#파일 생성 위치 temp/tracker_configs/로 바꾸는 법?'''
-
 import uuid
 from pathlib import Path
 
